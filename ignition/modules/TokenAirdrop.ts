@@ -6,9 +6,9 @@ const merkleRoot = "0x6d324e7ee478a907bcdc9c6ef7c88d098ff7600dfcc7c2bd5c7d02a945
 
 const TokenAirdropModule = buildModule("TokenAirdropModule", (m) => {
 
-    const save = m.contract("TokenAirdrop", [tokenAddress, merkleRoot]);
+    const token = m.contract("TokenAirdrop", [tokenAddress, merkleRoot]);
 
-    return { save };
+    return { token };
 });
 
 export default TokenAirdropModule;
